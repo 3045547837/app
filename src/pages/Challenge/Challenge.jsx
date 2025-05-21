@@ -16,13 +16,13 @@ const Challenge = () => {
     // 校验 GitHub 仓库 URL
     if (!githubRepoUrl.trim()) {
       newErrors.githubRepoUrl = '请填写 GitHub 仓库 URL';
-    } else if (!/^(http?:\/\/)?(www\.)?github\.com\/[\w-]+\/[\w-]+$/.test(githubRepoUrl)) {
+    } else if (!/^(https?:\/\/)?(www\.)?github\.com\/[\w-]+\/[\w-]+$/.test(githubRepoUrl)) {
       newErrors.githubRepoUrl = '请输入有效的 GitHub 仓库 URL';
     }
     // 校验 Vercel 在线体验地址
     if (!vercelUrl.trim()) {
       newErrors.vercelUrl = '请填写 Vercel 在线体验地址';
-    } else if (!/^(http?:\/\/)?[\w-]+\.vercel\.app$/.test(vercelUrl)) {
+    } else if (!/^(https?:\/\/)?[\w-]+\.vercel\.app/.test(vercelUrl)) {
       newErrors.vercelUrl = '请输入有效的 Vercel 在线体验地址';
     }
 
